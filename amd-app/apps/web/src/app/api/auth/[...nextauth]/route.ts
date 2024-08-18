@@ -14,13 +14,12 @@ export const authOptions = {
 
   providers: [
     GithubProvider({
-      clientId: "Ov23likLvBEtMyGYFZSA",
-      clientSecret: "1c359ded335b14e5bea2e6129d5c01e088133010",
+      clientId: process.env.NEXXT_PUBLIC_GITHUB_CLIENT || "",
+      clientSecret: process.env.NEXT_PUBLIC_GITHUB_SECRET || "",
     }),
     GoogleProvider({
-      clientId:
-        "280728861898-3astv25mlbuiekfn7vjukuq8uodgpenj.apps.googleusercontent.com",
-      clientSecret: "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",
+      clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT || "",
+      clientSecret: process.env.NEXT_PUBLIC_GOOGLE_SECRET || "",
     }),
   ],
 
